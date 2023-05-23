@@ -9,7 +9,7 @@ public class Num_15650_N_M_2 {
     static boolean[] visit; // 해당 인덱스 숫자가 이미 방문되었는지 표시하는 Boolean 배열
     static BufferedWriter bw; // 출력 빠르게 !
 
-    static void dfs(int start, int depth) throws IOException {
+    static void dfs(int start, int depth) throws IOException { // 시작인덱스를 갖고있으므로, 이전 숫자보다 큰숫자만 선택
         if (depth == M) {
             for (int val : arr) {
                 bw.write(val + " ");
@@ -22,7 +22,7 @@ public class Num_15650_N_M_2 {
             if (visit[i] == false) {
                 visit[i] = true;
                 arr[depth] = i;
-                dfs(i + 1, depth + 1);
+                dfs(i + 1, depth + 1); // 현재인덱스 i에 1을 더하여 다음 숫자부터 탐색하게 만듦
                 visit[i] = false;
             }
         }
