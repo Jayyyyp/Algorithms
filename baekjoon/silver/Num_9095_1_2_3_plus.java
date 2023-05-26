@@ -8,10 +8,11 @@ public class Num_9095_1_2_3_plus {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int[] numbers = new int[11];
-        numbers[0] = numbers[1] = 1; //0과 1의 경우의 수는 1
-        numbers[2] = 2;
+        numbers[1] = 1; // 1의 경우의 수
+        numbers[2] = 2; // 2의 경우의 수
+        numbers[3] = 4; // 3의 경우의 수
 
-        for(int i = 3; i <= 10; i++){
+        for(int i = 4; i <= 10; i++){
             numbers[i] = numbers[i - 1] + numbers[i - 2] + numbers[i - 3];
         }
         int T = Integer.parseInt(br.readLine());
