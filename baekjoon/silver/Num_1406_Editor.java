@@ -16,12 +16,12 @@ public class Num_1406_Editor{
         String str = br.readLine();
         int M = Integer.parseInt(br.readLine());
 
-        Stack<String> leftSt = new Stack<String>();
-        Stack<String> rightSt = new Stack<String>();
+        Stack<String> LS = new Stack<String>();
+        Stack<String> RS = new Stack<String>();
 
         String[] arr = str.split(""); // split() 메소드 : 문자 단위로 분리
         for(String s : arr) {
-            leftSt.push(s);
+            LS.push(s);
         }
 
         for(int i = 0; i < M; i++) {
@@ -30,24 +30,24 @@ public class Num_1406_Editor{
 
             switch(c) {
                 case 'L':
-                    if(!leftSt.isEmpty())
-                        rightSt.push(leftSt.pop());
+                    if(!LS.isEmpty())
+                        RS.push(LS.pop());
 
                     break;
                 case 'D':
-                    if(!rightSt.isEmpty())
-                        leftSt.push(rightSt.pop());
+                    if(!RS.isEmpty())
+                        LS.push(RS.pop());
 
                     break;
                 case 'B':
-                    if(!leftSt.isEmpty()) {
-                        leftSt.pop();
+                    if(!LS.isEmpty()) {
+                        LS.pop();
                     }
                     break;
                 case 'P':
-                    char t = command.charAt(2);
-                    leftSt.push(String.valueOf(t));
-                    //leftSt.push(st.nextToken());
+                    char ch = command.charAt(2);
+                    LS.push(String.valueOf(ch));
+                    //LS.push(st.nextToken());
 
                     break;
                 default:
@@ -56,11 +56,11 @@ public class Num_1406_Editor{
         }
 
         // 왼쪽 스택에 있는 데이터들을 모두 오른쪽 스택으로 옮겨 모든 내용을 출력
-        while(!leftSt.isEmpty())
-            rightSt.push(leftSt.pop());
+        while(!LS.isEmpty())
+            RS.push(LS.pop());
 
-        while(!rightSt.isEmpty())
-            bw.write(rightSt.pop());
+        while(!RS.isEmpty())
+            bw.write(RS.pop());
 
         bw.flush();
         bw.close();
