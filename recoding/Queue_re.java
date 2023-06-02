@@ -12,6 +12,7 @@ public class Queue_re {
 
         int N = Integer.parseInt(br.readLine());
         Queue <Integer> queue = new LinkedList<>();
+
         int last = 0;
 
         for(int i = 1; i <= N; i++){

@@ -16,8 +16,8 @@ public class Num_1406_Editor{
         String str = br.readLine();
         int M = Integer.parseInt(br.readLine());
 
-        Stack<String> LS = new Stack<String>();
-        Stack<String> RS = new Stack<String>();
+        Stack<String> LS = new Stack<>();
+        Stack<String> RS = new Stack<>();
 
         String[] arr = str.split(""); // split() 메소드 : 문자 단위로 분리
         for(String s : arr) {
