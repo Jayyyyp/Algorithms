@@ -25,7 +25,7 @@ public class keyLogger_re {
                         if(!RS.isEmpty()) LS.push(RS.pop());
                         break;
                     case  '-':
-                        if(!LS.isEmpty()) LS.pop();
+                        if(!LS.isEmpty())LS.pop();
                         break;
                     default:
                         LS.push(ch);
