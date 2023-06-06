@@ -3,20 +3,19 @@ package recoding;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class N_M_re {
+public class N_M_rere {
     public static int[] arr;
     public static boolean[] visit;
     public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    public static void dfs(int N,int M,int depth) throws IOException{
-        if(M == depth){
-            for (int v:arr) {
+    public static void dfs(int N, int M, int depth) throws IOException {
+        if(depth == M){
+            for(int v : arr){
                 bw.write(v + " ");
             }
             bw.write("\n");
             return;
         }
-
         for(int i = 1; i <= N; i++){
             if(!visit[i]){
                 visit[i] = true;
@@ -26,7 +25,6 @@ public class N_M_re {
             }
         }
     }
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -38,7 +36,6 @@ public class N_M_re {
         visit = new boolean[N + 1];
 
         dfs(N, M, 0);
-
 
         br.close();
         bw.flush();
