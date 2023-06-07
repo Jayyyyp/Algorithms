@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class DFS_BFS_re {
     static int arr[][];
     static boolean visited[];
-    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static StringBuilder sb = new StringBuilder();
     static int N, M, V;
 
     public static void main(String[] args) throws IOException {
@@ -31,20 +31,19 @@ public class DFS_BFS_re {
             arr[a][b] = arr[b][a] = 1;
         }
         dfs(V);
-        bw.write("\n");
+        sb.append("\n");
 
         visited = new boolean[N + 1];
         bfs(V);
+        System.out.println(sb);
 
         br.close();
-        bw.flush();
-        bw.close();
 
 
     }
-    public static void dfs(int V) throws  IOException{
+    public static void dfs(int V){
         visited[V] = true;
-        bw.write(V + " ");
+        sb.append(V + " ");
         for(int i = 1; i <= N; i++){
             if(arr[V][i] == 1 && !visited[i]){
                 dfs(i);
@@ -52,13 +51,13 @@ public class DFS_BFS_re {
         }
 
     }
-    public static void bfs(int V) throws IOException{
+    public static void bfs(int V){
         Queue<Integer> q = new LinkedList<>();
         visited[V] = true;
         q.add(V);
         while(!q.isEmpty()){
             V = q.poll();
-            bw.write(V + " ");
+            sb.append(V + " ");
             for(int i = 1; i <= N; i++){
                 if(arr[V][i] == 1 && !visited[i]){
                     q.add(i);
