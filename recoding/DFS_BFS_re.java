@@ -38,8 +38,6 @@ public class DFS_BFS_re {
         System.out.println(sb);
 
         br.close();
-
-
     }
     public static void dfs(int V){
         visited[V] = true;
@@ -49,7 +47,6 @@ public class DFS_BFS_re {
                 dfs(i);
             }
         }
-
     }
     public static void bfs(int V){
         Queue<Integer> q = new LinkedList<>();
@@ -64,8 +61,6 @@ public class DFS_BFS_re {
                     visited[i] = true;
                 }
             }
-
         }
     }
-
 }
