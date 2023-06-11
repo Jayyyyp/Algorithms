@@ -15,7 +15,6 @@ public class N_M_JavaTutor {
 
         	        System.out.println(sb.toString());
         	    }
-
         	    static void dfs(int N, int M, int depth) {
         	        if (depth == M) {
             	            for (int val : arr) {
@@ -24,14 +23,13 @@ public class N_M_JavaTutor {
             	            sb.append('\n');
             	            return;
             	        }
-
         	        for (int i = 1; i <= N; i++) {
                         if (!visit[i]) {
                 	                visit[i] = true;
                 	                arr[depth] = i;
                 	                dfs(N, M, depth + 1);
                 	                visit[i] = false;
-                	            }
-            	        }
+						}
+					}
             }
 	}
