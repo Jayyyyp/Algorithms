@@ -17,6 +17,7 @@ public class DFS_BFS_rere {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         st = new StringTokenizer(br.readLine());
+        // 한 줄을 공백을 기준으로 나누기위해 사용
 
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
@@ -26,9 +27,9 @@ public class DFS_BFS_rere {
         visited = new boolean[N + 1]; // 각 인덱스를 초깃값(false)로 초기화
 
         for(int i = 1; i <= M; i++){
-            str = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(str.nextToken());
-            int b = Integer.parseInt(str.nextToken());
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
 
             arr[a][b] = arr[b][a] = 1; // 각 정점이 연결되어있다는 표시
         }
