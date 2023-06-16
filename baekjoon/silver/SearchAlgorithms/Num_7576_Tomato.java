@@ -39,10 +39,9 @@ public class Num_7576_Tomato {
         // 안익은 토마토가 없다면 종료.
         if(nomato == 0){
             System.out.print(0);
-            System.exit(0);
+            System.exit(0); // 프로그램 정상 종료(1입력은 비정상 종료)
         }
 
-        // 익은 토마토가 만약 n개 일때, 걸린 날짜 / n 인가?
         while(!q.isEmpty()){
             Pair p = q.poll();
 
