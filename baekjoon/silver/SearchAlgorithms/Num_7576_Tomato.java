@@ -12,8 +12,8 @@ public class Num_7576_Tomato {
         int nomato = 0;      // 안익은 토마토
         int M = Integer.parseInt(st.nextToken());
         int N = Integer.parseInt(st.nextToken());
-        int[][] days = new int[N][M];     // 날짜를 저장할 2차원배열
-        int[][] tomatoes = new int[N][M];  // 토마토의 상태를 저장할 2차원배열
+        int[][] days = new int[N][M];     // 날짜를 저장할 2차원 배열
+        int[][] tomatoes = new int[N][M];  // 토마토의 상태를 저장할 2차원 배열
 
         Queue<Pair> q = new LinkedList<>();
         int[] dx = {1, 0 , -1, 0};    // 상하좌우 좌표 계산을 위한 배열
