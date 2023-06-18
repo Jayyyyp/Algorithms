@@ -225,7 +225,7 @@ System.out.println(number);
   - Date 객체를 문자열로 변환하거나, 문자열을 Date 객체로 변환하는 데 사용한다.
   
   ex. `SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd")`
-    : 출력결과 -> 2023/05/24 
+    : 출력결과 -> 2023/05/24
 
 ---
 
