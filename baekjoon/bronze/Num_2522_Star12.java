@@ -12,11 +12,24 @@ public class Num_2522_Star12 {
         int N = Integer.parseInt(br.readLine()); // 3
         br.close();
 
-
-
-        System.out.println();
-
-
+        for(int i = 1; i <= N; i++){
+            for(int j = N-i; j > 0; j--){
+                sb.append(" ");
+            }
+            for(int j = 1; j <= i; j++){
+                sb.append("*");
+            }
+            sb.append("\n");
+        }
+        for (int i = 1; i <= N - 1; i++){
+            for(int j = 1; j <= i; j++){
+                sb.append(" ");
+            }
+            for (int j = 1; j <= N-i; j++){
+                sb.append("*");
+            }
+            sb.append("\n");
+        }
+        System.out.print(sb);
     }
-
 }
