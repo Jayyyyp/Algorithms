@@ -1,4 +1,4 @@
-package baekjoon.silver.Sort;
+package baekjoon.bronze;
 
 import java.io.*;
 import java.util.Arrays;
